@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-board {
+  width: 250px;
+  height: 500px;
+  background-color: #000;
+  border: 2px solid #fff;
+}

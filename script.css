@@ -1,0 +1,48 @@
+// Constants
+const ROWS = 20;
+const COLS = 10;
+
+// Game board
+let board = [];
+
+// Initialize the game board
+function initBoard() {
+  for (let row = 0; row < ROWS; row++) {
+    board[row] = [];
+    for (let col = 0; col < COLS; col++) {
+      board[row][col] = 0;
+    }
+  }
+}
+
+// Render the game board
+function renderBoard() {
+  const gameBoard = document.getElementById('game-board');
+  gameBoard.innerHTML = '';
+
+  for (let row = 0; row < ROWS; row++) {
+    for (let col = 0; col < COLS; col++) {
+      const cell = document.createElement('div');
+      cell.className = board[row][col] ? 'block' : 'empty';
+      gameBoard.appendChild(cell);
+    }
+  }
+}
+
+// Entry point
+function startGame() {
+  initBoard();
+  renderBoard();
+}
+
+// Start the game
+startGame();
+/* ... Existing styles ... */
+
+.empty {
+  background-color: #000;
+}
+
+.block {
+  background-color: #fff;
+}
